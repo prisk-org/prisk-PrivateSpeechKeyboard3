@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    name: Build & Test (iOS Simulator)
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.3.app
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build PriskApp
+        run: |
+          xcodebuild build \
+            -project Prisk.xcodeproj \
+            -scheme Prisk \
+            -destination "platform=iOS Simulator,name=iPhone 16,OS=latest" \
+            -derivedDataPath /tmp/DerivedData \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            | xcpretty
+
+      - name: Run Unit Tests
+        run: |
+          xcodebuild test \
+            -project Prisk.xcodeproj \
+            -scheme Prisk \
+            -destination "platform=iOS Simulator,name=iPhone 16,OS=latest" \
+            -derivedDataPath /tmp/DerivedData \
+            -only-testing STTEngineTests \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            | xcpretty
+
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: /tmp/DerivedData/Logs/Test/

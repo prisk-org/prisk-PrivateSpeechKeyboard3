@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00D975B6947720AEDAE1138A /* AppGroupBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7AC60970CE34C9A730A8AF /* AppGroupBridge.swift */; };
+		0EBE33B17D78BF99BE1206F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDAD86E9841A017A35DA82E /* SceneDelegate.swift */; };
+		107183334CC34489C5DEF995 /* SherpaONNXWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F5C74B3FC6678F391CC62 /* SherpaONNXWrapper.swift */; };
+		17C43663BEC9B3F83F1606C4 /* AppGroupConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F0829FD9DCAE742C944DD7 /* AppGroupConstants.swift */; };
+		1EF7D6F297528AB04E0ACD3C /* KotobaWhisperEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7056B6CB67C1901556CD3A2 /* KotobaWhisperEngine.swift */; };
+		222C6D08AF160C51FF083FA8 /* VoskEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303389850F4C2B4F6C6265D /* VoskEngine.swift */; };
+		24BBA4CA79ED160FD6743DC2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685A6274C3E3AE0BE8923846 /* OnboardingViewController.swift */; };
+		2DE56428B6FB08BBA94CD58B /* SuggestionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC329A477AA2D9459F84AF /* SuggestionBarView.swift */; };
+		2FB4690A637950D3754F4F73 /* STTEngineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F027A7440F1FA0EAF66D92E /* STTEngineType.swift */; };
+		344C9DA91A89C857F544EFEB /* SpeechAnalyzerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C73E79F48F3D92FB63BC1E /* SpeechAnalyzerEngine.swift */; };
+		471B90731B06FF31F819F5B4 /* TranscriptionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C65DFD22A0D2819662AD9F /* TranscriptionResult.swift */; };
+		50A8E81AEA764769EE7756F8 /* MoonshineEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E5AC106F142D9A8D2BC9C4 /* MoonshineEngine.swift */; };
+		59DBBA7EA12B29867F806F0F /* AppGroupConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F0829FD9DCAE742C944DD7 /* AppGroupConstants.swift */; };
+		62AA85710D785EA9AFCE17E6 /* STTEngineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F027A7440F1FA0EAF66D92E /* STTEngineType.swift */; };
+		654341137C883134B0832969 /* STTEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4834E9727ED41EC066286595 /* STTEngineTests.swift */; };
+		69D556F89207D1DCC0DF8784 /* LanguagePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FCF4C5B9CE0C36ECDDCC97 /* LanguagePreference.swift */; };
+		6D961730188FDA4BE5B3E99E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F0094C848D5309EA037C3 /* SettingsViewController.swift */; };
+		76FFA77EF48059618F9F3E4D /* ModelManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3625CE5527ACB1816063AE3 /* ModelManagerViewController.swift */; };
+		84E87CEB20BC284AC58D000F /* VoiceInputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C903F4038DF60EEEF85925F7 /* VoiceInputButton.swift */; };
+		9171ED3AB18379A55D49651F /* STTEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB0D1B1D1C0C2D0A6763642 /* STTEngine.swift */; };
+		A1661CAEDEB24E4318234937 /* ReazonSpeechEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EF1FF14FBE02F7E012ECFE /* ReazonSpeechEngine.swift */; };
+		A78DE1294DE2BDA32C17B782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA62CBB9B81ED249B9FCC00 /* AppDelegate.swift */; };
+		AF5372529C3D77695AD13BAE /* LanguagePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FCF4C5B9CE0C36ECDDCC97 /* LanguagePreference.swift */; };
+		AF5D05CAD3D92ADECF228B36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC2F6207577CCA5B10CE7BB /* Assets.xcassets */; };
+		B66BF9F48384697B4F69FEA8 /* SFSpeechEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A30301179AC3D88A59461 /* SFSpeechEngine.swift */; };
+		BAF5346211CD13E01EE337AD /* WhisperKit in Frameworks */ = {isa = PBXBuildFile; productRef = 607CF360299099697780BEE6 /* WhisperKit */; };
+		C54C574063C6A038907E8CDB /* WhisperKitEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC53AB5BBAF238C6EC6DA8 /* WhisperKitEngine.swift */; };
+		C5CB686A5109B7BF581584D2 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C655638D4FA7C6338CB594DF /* KeyboardViewController.swift */; };
+		CDE9BB337123021D8D73ED96 /* PriskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CB4ABCFC08CC192EB3BDD /* PriskUITests.swift */; };
+		D708D09E2B2372E67A6E5DAA /* CursorTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D817200195C3F1EF0F6E33 /* CursorTrackingView.swift */; };
+		D98CD91EE6B08B7CAAB92B93 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812A18FEFEB0A2D1C6EE5F3 /* RecordingViewController.swift */; };
+		ECD1F6E85D4C09312168A281 /* TranscriptionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C65DFD22A0D2819662AD9F /* TranscriptionResult.swift */; };
+		EF5252A90CA91E0994B581C3 /* STTEngineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39460D04B6F1D81ABE6D47D4 /* STTEngineManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		362FC701E0653003843735F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD299112CE2D8681E0413498 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB3BE7723FB3A9A5DC20E32C;
+			remoteInfo = PriskApp;
+		};
+		F3A0A296531EF2D61957F061 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD299112CE2D8681E0413498 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB3BE7723FB3A9A5DC20E32C;
+			remoteInfo = PriskApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BA62CBB9B81ED249B9FCC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0F027A7440F1FA0EAF66D92E /* STTEngineType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTEngineType.swift; sourceTree = "<group>"; };
+		12EF1FF14FBE02F7E012ECFE /* ReazonSpeechEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReazonSpeechEngine.swift; sourceTree = "<group>"; };
+		257CB4ABCFC08CC192EB3BDD /* PriskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriskUITests.swift; sourceTree = "<group>"; };
+		26E07EE89D8DC0229A168B74 /* PriskUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PriskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		39460D04B6F1D81ABE6D47D4 /* STTEngineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTEngineManager.swift; sourceTree = "<group>"; };
+		3E76670A32C73E8E0A77958D /* STTEngineTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = STTEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		420A30301179AC3D88A59461 /* SFSpeechEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSpeechEngine.swift; sourceTree = "<group>"; };
+		4834E9727ED41EC066286595 /* STTEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTEngineTests.swift; sourceTree = "<group>"; };
+		510FC84BBB627BCF7AF6259F /* PriskApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PriskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FCF4C5B9CE0C36ECDDCC97 /* LanguagePreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePreference.swift; sourceTree = "<group>"; };
+		685A6274C3E3AE0BE8923846 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		6FB0D1B1D1C0C2D0A6763642 /* STTEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTEngine.swift; sourceTree = "<group>"; };
+		71F0829FD9DCAE742C944DD7 /* AppGroupConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupConstants.swift; sourceTree = "<group>"; };
+		73450EC01E6BC0B59361381E /* PriskKeyboard.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PriskKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DBC329A477AA2D9459F84AF /* SuggestionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionBarView.swift; sourceTree = "<group>"; };
+		8D2F5C74B3FC6678F391CC62 /* SherpaONNXWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SherpaONNXWrapper.swift; sourceTree = "<group>"; };
+		8D5F0094C848D5309EA037C3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8D7AC60970CE34C9A730A8AF /* AppGroupBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupBridge.swift; sourceTree = "<group>"; };
+		9AC2F6207577CCA5B10CE7BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3625CE5527ACB1816063AE3 /* ModelManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManagerViewController.swift; sourceTree = "<group>"; };
+		BCBC53AB5BBAF238C6EC6DA8 /* WhisperKitEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperKitEngine.swift; sourceTree = "<group>"; };
+		C303389850F4C2B4F6C6265D /* VoskEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoskEngine.swift; sourceTree = "<group>"; };
+		C655638D4FA7C6338CB594DF /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		C903F4038DF60EEEF85925F7 /* VoiceInputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceInputButton.swift; sourceTree = "<group>"; };
+		D5D817200195C3F1EF0F6E33 /* CursorTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorTrackingView.swift; sourceTree = "<group>"; };
+		D812A18FEFEB0A2D1C6EE5F3 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		E7056B6CB67C1901556CD3A2 /* KotobaWhisperEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotobaWhisperEngine.swift; sourceTree = "<group>"; };
+		EEDAD86E9841A017A35DA82E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F1C73E79F48F3D92FB63BC1E /* SpeechAnalyzerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechAnalyzerEngine.swift; sourceTree = "<group>"; };
+		F2C65DFD22A0D2819662AD9F /* TranscriptionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionResult.swift; sourceTree = "<group>"; };
+		F4E5AC106F142D9A8D2BC9C4 /* MoonshineEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshineEngine.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91E2DA6337E4119A492832A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAF5346211CD13E01EE337AD /* WhisperKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0512C56ECC270CB65F209613 /* PriskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				257CB4ABCFC08CC192EB3BDD /* PriskUITests.swift */,
+			);
+			path = PriskUITests;
+			sourceTree = "<group>";
+		};
+		7CD54B251DE3694CCB8D5817 /* PriskSTT */ = {
+			isa = PBXGroup;
+			children = (
+				E7056B6CB67C1901556CD3A2 /* KotobaWhisperEngine.swift */,
+				F4E5AC106F142D9A8D2BC9C4 /* MoonshineEngine.swift */,
+				12EF1FF14FBE02F7E012ECFE /* ReazonSpeechEngine.swift */,
+				420A30301179AC3D88A59461 /* SFSpeechEngine.swift */,
+				8D2F5C74B3FC6678F391CC62 /* SherpaONNXWrapper.swift */,
+				F1C73E79F48F3D92FB63BC1E /* SpeechAnalyzerEngine.swift */,
+				6FB0D1B1D1C0C2D0A6763642 /* STTEngine.swift */,
+				39460D04B6F1D81ABE6D47D4 /* STTEngineManager.swift */,
+				C303389850F4C2B4F6C6265D /* VoskEngine.swift */,
+				BCBC53AB5BBAF238C6EC6DA8 /* WhisperKitEngine.swift */,
+			);
+			path = PriskSTT;
+			sourceTree = "<group>";
+		};
+		9B197159258511D39C16F8D2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0512C56ECC270CB65F209613 /* PriskUITests */,
+				A4071BEEC2E9F4FBA59DCEB1 /* STTEngineTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A4071BEEC2E9F4FBA59DCEB1 /* STTEngineTests */ = {
+			isa = PBXGroup;
+			children = (
+				4834E9727ED41EC066286595 /* STTEngineTests.swift */,
+			);
+			path = STTEngineTests;
+			sourceTree = "<group>";
+		};
+		AE21181E78B334637C8D4422 /* PriskKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8D7AC60970CE34C9A730A8AF /* AppGroupBridge.swift */,
+				D5D817200195C3F1EF0F6E33 /* CursorTrackingView.swift */,
+				C655638D4FA7C6338CB594DF /* KeyboardViewController.swift */,
+				7DBC329A477AA2D9459F84AF /* SuggestionBarView.swift */,
+				C903F4038DF60EEEF85925F7 /* VoiceInputButton.swift */,
+			);
+			path = PriskKeyboard;
+			sourceTree = "<group>";
+		};
+		AF5490F733898444BC530E46 = {
+			isa = PBXGroup;
+			children = (
+				B2254527B28EECBE330B9AF2 /* PriskApp */,
+				AE21181E78B334637C8D4422 /* PriskKeyboard */,
+				7CD54B251DE3694CCB8D5817 /* PriskSTT */,
+				B1357FF9FFC98D9639E3E0E3 /* PriskShared */,
+				9B197159258511D39C16F8D2 /* Tests */,
+				B6B541A23F59F883E019566F /* Resources */,
+				DB4BCC762B309E1832CCE215 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1357FF9FFC98D9639E3E0E3 /* PriskShared */ = {
+			isa = PBXGroup;
+			children = (
+				71F0829FD9DCAE742C944DD7 /* AppGroupConstants.swift */,
+				58FCF4C5B9CE0C36ECDDCC97 /* LanguagePreference.swift */,
+				0F027A7440F1FA0EAF66D92E /* STTEngineType.swift */,
+				F2C65DFD22A0D2819662AD9F /* TranscriptionResult.swift */,
+			);
+			path = PriskShared;
+			sourceTree = "<group>";
+		};
+		B2254527B28EECBE330B9AF2 /* PriskApp */ = {
+			isa = PBXGroup;
+			children = (
+				0BA62CBB9B81ED249B9FCC00 /* AppDelegate.swift */,
+				B3625CE5527ACB1816063AE3 /* ModelManagerViewController.swift */,
+				685A6274C3E3AE0BE8923846 /* OnboardingViewController.swift */,
+				D812A18FEFEB0A2D1C6EE5F3 /* RecordingViewController.swift */,
+				EEDAD86E9841A017A35DA82E /* SceneDelegate.swift */,
+				8D5F0094C848D5309EA037C3 /* SettingsViewController.swift */,
+			);
+			path = PriskApp;
+			sourceTree = "<group>";
+		};
+		B6B541A23F59F883E019566F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9AC2F6207577CCA5B10CE7BB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB4BCC762B309E1832CCE215 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				510FC84BBB627BCF7AF6259F /* PriskApp.app */,
+				73450EC01E6BC0B59361381E /* PriskKeyboard.appex */,
+				26E07EE89D8DC0229A168B74 /* PriskUITests.xctest */,
+				3E76670A32C73E8E0A77958D /* STTEngineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28335FA86EA81634A9302E24 /* STTEngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59C44B9D5F4587EA549B172E /* Build configuration list for PBXNativeTarget "STTEngineTests" */;
+			buildPhases = (
+				1726EB5B1BEE05C3A07BBCB6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE3CADD672073A63A992F838 /* PBXTargetDependency */,
+			);
+			name = STTEngineTests;
+			packageProductDependencies = (
+			);
+			productName = STTEngineTests;
+			productReference = 3E76670A32C73E8E0A77958D /* STTEngineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		43D4EB8636F2AA8F30D17459 /* PriskKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 439C00412493C13F010D709B /* Build configuration list for PBXNativeTarget "PriskKeyboard" */;
+			buildPhases = (
+				CFF69CBA072FCBBFCB70BB9C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PriskKeyboard;
+			packageProductDependencies = (
+			);
+			productName = PriskKeyboard;
+			productReference = 73450EC01E6BC0B59361381E /* PriskKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		AB3BE7723FB3A9A5DC20E32C /* PriskApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9CB9B20F7F44C0F5099F3EE /* Build configuration list for PBXNativeTarget "PriskApp" */;
+			buildPhases = (
+				2CBCFC3AE8A370175D650A2C /* Sources */,
+				655AF484AB65047AD14DABC5 /* Resources */,
+				91E2DA6337E4119A492832A2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PriskApp;
+			packageProductDependencies = (
+				607CF360299099697780BEE6 /* WhisperKit */,
+			);
+			productName = PriskApp;
+			productReference = 510FC84BBB627BCF7AF6259F /* PriskApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2E750552FB7B4262DB9B687 /* PriskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8ACF92B930CE1899CF44C01D /* Build configuration list for PBXNativeTarget "PriskUITests" */;
+			buildPhases = (
+				1361B289B9B929B0890F8C36 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6809812C8509D5B9C0FD3BA0 /* PBXTargetDependency */,
+			);
+			name = PriskUITests;
+			packageProductDependencies = (
+			);
+			productName = PriskUITests;
+			productReference = 26E07EE89D8DC0229A168B74 /* PriskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD299112CE2D8681E0413498 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					28335FA86EA81634A9302E24 = {
+						DevelopmentTeam = U2BRSZ28PG;
+						ProvisioningStyle = Automatic;
+					};
+					43D4EB8636F2AA8F30D17459 = {
+						DevelopmentTeam = U2BRSZ28PG;
+						ProvisioningStyle = Automatic;
+					};
+					AB3BE7723FB3A9A5DC20E32C = {
+						DevelopmentTeam = U2BRSZ28PG;
+						ProvisioningStyle = Automatic;
+					};
+					F2E750552FB7B4262DB9B687 = {
+						DevelopmentTeam = U2BRSZ28PG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AB3BE7723FB3A9A5DC20E32C;
+					};
+				};
+			};
+			buildConfigurationList = 65972DFF6E2B6C329DFA7994 /* Build configuration list for PBXProject "Prisk" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = AF5490F733898444BC530E46;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D0E411AB2BAD5EDFFF5C2A48 /* XCRemoteSwiftPackageReference "WhisperKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB3BE7723FB3A9A5DC20E32C /* PriskApp */,
+				43D4EB8636F2AA8F30D17459 /* PriskKeyboard */,
+				F2E750552FB7B4262DB9B687 /* PriskUITests */,
+				28335FA86EA81634A9302E24 /* STTEngineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		655AF484AB65047AD14DABC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5D05CAD3D92ADECF228B36 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1361B289B9B929B0890F8C36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE9BB337123021D8D73ED96 /* PriskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1726EB5B1BEE05C3A07BBCB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654341137C883134B0832969 /* STTEngineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CBCFC3AE8A370175D650A2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78DE1294DE2BDA32C17B782 /* AppDelegate.swift in Sources */,
+				59DBBA7EA12B29867F806F0F /* AppGroupConstants.swift in Sources */,
+				1EF7D6F297528AB04E0ACD3C /* KotobaWhisperEngine.swift in Sources */,
+				69D556F89207D1DCC0DF8784 /* LanguagePreference.swift in Sources */,
+				76FFA77EF48059618F9F3E4D /* ModelManagerViewController.swift in Sources */,
+				50A8E81AEA764769EE7756F8 /* MoonshineEngine.swift in Sources */,
+				24BBA4CA79ED160FD6743DC2 /* OnboardingViewController.swift in Sources */,
+				A1661CAEDEB24E4318234937 /* ReazonSpeechEngine.swift in Sources */,
+				D98CD91EE6B08B7CAAB92B93 /* RecordingViewController.swift in Sources */,
+				B66BF9F48384697B4F69FEA8 /* SFSpeechEngine.swift in Sources */,
+				9171ED3AB18379A55D49651F /* STTEngine.swift in Sources */,
+				EF5252A90CA91E0994B581C3 /* STTEngineManager.swift in Sources */,
+				62AA85710D785EA9AFCE17E6 /* STTEngineType.swift in Sources */,
+				0EBE33B17D78BF99BE1206F7 /* SceneDelegate.swift in Sources */,
+				6D961730188FDA4BE5B3E99E /* SettingsViewController.swift in Sources */,
+				107183334CC34489C5DEF995 /* SherpaONNXWrapper.swift in Sources */,
+				344C9DA91A89C857F544EFEB /* SpeechAnalyzerEngine.swift in Sources */,
+				471B90731B06FF31F819F5B4 /* TranscriptionResult.swift in Sources */,
+				222C6D08AF160C51FF083FA8 /* VoskEngine.swift in Sources */,
+				C54C574063C6A038907E8CDB /* WhisperKitEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFF69CBA072FCBBFCB70BB9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00D975B6947720AEDAE1138A /* AppGroupBridge.swift in Sources */,
+				17C43663BEC9B3F83F1606C4 /* AppGroupConstants.swift in Sources */,
+				D708D09E2B2372E67A6E5DAA /* CursorTrackingView.swift in Sources */,
+				C5CB686A5109B7BF581584D2 /* KeyboardViewController.swift in Sources */,
+				AF5372529C3D77695AD13BAE /* LanguagePreference.swift in Sources */,
+				2FB4690A637950D3754F4F73 /* STTEngineType.swift in Sources */,
+				2DE56428B6FB08BBA94CD58B /* SuggestionBarView.swift in Sources */,
+				ECD1F6E85D4C09312168A281 /* TranscriptionResult.swift in Sources */,
+				84E87CEB20BC284AC58D000F /* VoiceInputButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6809812C8509D5B9C0FD3BA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB3BE7723FB3A9A5DC20E32C /* PriskApp */;
+			targetProxy = 362FC701E0653003843735F1 /* PBXContainerItemProxy */;
+		};
+		FE3CADD672073A63A992F838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB3BE7723FB3A9A5DC20E32C /* PriskApp */;
+			targetProxy = F3A0A296531EF2D61957F061 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		23D2CBEA3185FA93DBE84F85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = U2BRSZ28PG;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		2C0D37162E5D9EF5F53A664E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PriskApp/PriskApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = PriskApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.PriskApp;
+				PRODUCT_NAME = Prisk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38E290EE86703DACA8E78B6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.STTEngineTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "";
+			};
+			name = Release;
+		};
+		453F7922123723F418CA831C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_ENTITLEMENTS = PriskKeyboard/PriskKeyboard.entitlements;
+				INFOPLIST_FILE = PriskKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.PriskKeyboard;
+				PRODUCT_NAME = PriskKeyboard;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4F8587FB3C1EDDE6538BE8B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_ENTITLEMENTS = PriskKeyboard/PriskKeyboard.entitlements;
+				INFOPLIST_FILE = PriskKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.PriskKeyboard;
+				PRODUCT_NAME = PriskKeyboard;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CAAD279C0E8D757526B0E67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.STTEngineTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "";
+			};
+			name = Debug;
+		};
+		74D677B030A44EE52C84125C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.PriskUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PriskApp;
+			};
+			name = Debug;
+		};
+		818C789D9970ECABBB8780FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = U2BRSZ28PG;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		8623EBC838BE5B74D3F85F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.PriskUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PriskApp;
+			};
+			name = Release;
+		};
+		9A7FB17BA52A7E8BB7A1754D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PriskApp/PriskApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = PriskApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.PriskApp;
+				PRODUCT_NAME = Prisk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		439C00412493C13F010D709B /* Build configuration list for PBXNativeTarget "PriskKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F8587FB3C1EDDE6538BE8B8 /* Debug */,
+				453F7922123723F418CA831C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		59C44B9D5F4587EA549B172E /* Build configuration list for PBXNativeTarget "STTEngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CAAD279C0E8D757526B0E67 /* Debug */,
+				38E290EE86703DACA8E78B6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		65972DFF6E2B6C329DFA7994 /* Build configuration list for PBXProject "Prisk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D2CBEA3185FA93DBE84F85 /* Debug */,
+				818C789D9970ECABBB8780FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8ACF92B930CE1899CF44C01D /* Build configuration list for PBXNativeTarget "PriskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74D677B030A44EE52C84125C /* Debug */,
+				8623EBC838BE5B74D3F85F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E9CB9B20F7F44C0F5099F3EE /* Build configuration list for PBXNativeTarget "PriskApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C0D37162E5D9EF5F53A664E /* Debug */,
+				9A7FB17BA52A7E8BB7A1754D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0E411AB2BAD5EDFFF5C2A48 /* XCRemoteSwiftPackageReference "WhisperKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/argmaxinc/WhisperKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		607CF360299099697780BEE6 /* WhisperKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0E411AB2BAD5EDFFF5C2A48 /* XCRemoteSwiftPackageReference "WhisperKit" */;
+			productName = WhisperKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AD299112CE2D8681E0413498 /* Project object */;
+}

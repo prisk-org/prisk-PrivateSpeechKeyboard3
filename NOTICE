@@ -1,0 +1,26 @@
+Prisk (Private Speech Keyboard)
+Copyright (c) 2026 Prisk Contributors
+
+This product is licensed under the Apache License, Version 2.0.
+See the LICENSE file for the full license text.
+
+---
+
+This product includes software derived from giellakbd-ios,
+Copyright (c) Divvun / UiT The Arctic University of Norway.
+Licensed under the Apache License, Version 2.0.
+Source: https://github.com/divvun/giellakbd-ios
+
+---
+
+This product may include WhisperKit,
+Copyright (c) Argmax, Inc.
+Licensed under the Apache License, Version 2.0.
+Source: https://github.com/argmaxinc/WhisperKit
+
+---
+
+This product may include Sherpa-ONNX,
+Copyright (c) 2022-2024 k2-fsa / Next-gen Kaldi authors.
+Licensed under the Apache License, Version 2.0.
+Source: https://github.com/k2-fsa/sherpa-onnx
