@@ -31,13 +31,17 @@ public final class WhisperKitEngine: NSObject, STTEngine {
     // MARK: — STTEngine
 
     public func prepare() async throws {
+        let _model = modelName
+        PriskLogger.stt.info("WhisperKitEngine: prepare start model=\(_model, privacy: .public)")
         setState(.preparing)
         let config = WhisperKitConfig(model: modelName)
         whisperKit = try await WhisperKit(config)
+        PriskLogger.stt.info("WhisperKitEngine: model loaded successfully")
         setState(.idle)
     }
 
     public func startRecording() async throws {
+        PriskLogger.stt.info("WhisperKitEngine: startRecording")
         if whisperKit == nil {
             try await prepare()
         }
@@ -119,6 +123,8 @@ public final class WhisperKitEngine: NSObject, STTEngine {
     }
 
     private func transcribeBuffer() async {
+        let _bufSize = audioBuffer.count
+        PriskLogger.stt.info("WhisperKitEngine: transcribeBuffer bufferSize=\(_bufSize)")
         guard let whisperKit, !audioBuffer.isEmpty else {
             setState(.idle)
             return
@@ -132,6 +138,7 @@ public final class WhisperKitEngine: NSObject, STTEngine {
             )
             let results = try await whisperKit.transcribe(audioArray: audioBuffer, decodeOptions: options)
             let text = results.map { $0.text }.joined(separator: " ").trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            PriskLogger.stt.info("WhisperKitEngine: result='\(text.prefix(50), privacy: .private)'")
             let detectedLang = results.first?.language
 
             let result = TranscriptionResult(

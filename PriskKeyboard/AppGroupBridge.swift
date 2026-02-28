@@ -17,6 +17,7 @@ final class AppGroupBridge {
     // MARK: — Darwin Notification
 
     func startListening() {
+        PriskLogger.ipc.info("AppGroupBridge: startListening")
         let nc = CFNotificationCenterGetDarwinNotifyCenter()
 
         // Final result ready
@@ -67,6 +68,7 @@ final class AppGroupBridge {
     // MARK: — Handlers
 
     private func handleTranscriptionReady() {
+        PriskLogger.ipc.info("AppGroupBridge: transcriptionReady notification received")
         guard let result = TranscriptionResult.load() else { return }
         DispatchQueue.main.async { [weak self] in
             self?.onTranscriptionReady?(result)
@@ -75,6 +77,7 @@ final class AppGroupBridge {
 
     private func handleStateChanged() {
         let state = RecordingState.load()
+        PriskLogger.ipc.info("AppGroupBridge: stateChanged to \(state.rawValue, privacy: .public)")
         DispatchQueue.main.async { [weak self] in
             self?.onStateChanged?(state)
             if state == .recording {

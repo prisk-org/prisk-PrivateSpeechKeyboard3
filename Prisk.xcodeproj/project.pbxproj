@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		00D975B6947720AEDAE1138A /* AppGroupBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7AC60970CE34C9A730A8AF /* AppGroupBridge.swift */; };
+		09050F22E00BBAC3E6175450 /* PriskLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AFEA4C5F3771961165E942 /* PriskLogger.swift */; };
 		0EBE33B17D78BF99BE1206F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDAD86E9841A017A35DA82E /* SceneDelegate.swift */; };
 		107183334CC34489C5DEF995 /* SherpaONNXWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F5C74B3FC6678F391CC62 /* SherpaONNXWrapper.swift */; };
 		17C43663BEC9B3F83F1606C4 /* AppGroupConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F0829FD9DCAE742C944DD7 /* AppGroupConstants.swift */; };
 		1EF7D6F297528AB04E0ACD3C /* KotobaWhisperEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7056B6CB67C1901556CD3A2 /* KotobaWhisperEngine.swift */; };
 		222C6D08AF160C51FF083FA8 /* VoskEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303389850F4C2B4F6C6265D /* VoskEngine.swift */; };
 		24BBA4CA79ED160FD6743DC2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685A6274C3E3AE0BE8923846 /* OnboardingViewController.swift */; };
+		2BFFA1E33098B7703F45BC2B /* PriskLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AFEA4C5F3771961165E942 /* PriskLogger.swift */; };
 		2DE56428B6FB08BBA94CD58B /* SuggestionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC329A477AA2D9459F84AF /* SuggestionBarView.swift */; };
 		2FB4690A637950D3754F4F73 /* STTEngineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F027A7440F1FA0EAF66D92E /* STTEngineType.swift */; };
 		344C9DA91A89C857F544EFEB /* SpeechAnalyzerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C73E79F48F3D92FB63BC1E /* SpeechAnalyzerEngine.swift */; };
@@ -68,6 +70,7 @@
 		39460D04B6F1D81ABE6D47D4 /* STTEngineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTEngineManager.swift; sourceTree = "<group>"; };
 		3E76670A32C73E8E0A77958D /* STTEngineTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = STTEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		420A30301179AC3D88A59461 /* SFSpeechEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSpeechEngine.swift; sourceTree = "<group>"; };
+		42AFEA4C5F3771961165E942 /* PriskLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriskLogger.swift; sourceTree = "<group>"; };
 		4834E9727ED41EC066286595 /* STTEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTEngineTests.swift; sourceTree = "<group>"; };
 		510FC84BBB627BCF7AF6259F /* PriskApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PriskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FCF4C5B9CE0C36ECDDCC97 /* LanguagePreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePreference.swift; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 			children = (
 				71F0829FD9DCAE742C944DD7 /* AppGroupConstants.swift */,
 				58FCF4C5B9CE0C36ECDDCC97 /* LanguagePreference.swift */,
+				42AFEA4C5F3771961165E942 /* PriskLogger.swift */,
 				0F027A7440F1FA0EAF66D92E /* STTEngineType.swift */,
 				F2C65DFD22A0D2819662AD9F /* TranscriptionResult.swift */,
 			);
@@ -384,6 +388,7 @@
 				76FFA77EF48059618F9F3E4D /* ModelManagerViewController.swift in Sources */,
 				50A8E81AEA764769EE7756F8 /* MoonshineEngine.swift in Sources */,
 				24BBA4CA79ED160FD6743DC2 /* OnboardingViewController.swift in Sources */,
+				09050F22E00BBAC3E6175450 /* PriskLogger.swift in Sources */,
 				A1661CAEDEB24E4318234937 /* ReazonSpeechEngine.swift in Sources */,
 				D98CD91EE6B08B7CAAB92B93 /* RecordingViewController.swift in Sources */,
 				B66BF9F48384697B4F69FEA8 /* SFSpeechEngine.swift in Sources */,
@@ -409,6 +414,7 @@
 				D708D09E2B2372E67A6E5DAA /* CursorTrackingView.swift in Sources */,
 				C5CB686A5109B7BF581584D2 /* KeyboardViewController.swift in Sources */,
 				AF5372529C3D77695AD13BAE /* LanguagePreference.swift in Sources */,
+				2BFFA1E33098B7703F45BC2B /* PriskLogger.swift in Sources */,
 				2FB4690A637950D3754F4F73 /* STTEngineType.swift in Sources */,
 				2DE56428B6FB08BBA94CD58B /* SuggestionBarView.swift in Sources */,
 				ECD1F6E85D4C09312168A281 /* TranscriptionResult.swift in Sources */,

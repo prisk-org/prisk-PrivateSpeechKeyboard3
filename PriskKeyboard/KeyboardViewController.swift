@@ -64,6 +64,7 @@ final class KeyboardViewController: UIInputViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        PriskLogger.keyboard.info("KeyboardViewController: viewDidLoad")
         view.backgroundColor = .systemGroupedBackground
         setupSuggestionBar()
         setupKeyboard()
@@ -108,6 +109,8 @@ final class KeyboardViewController: UIInputViewController {
     }
 
     private func buildKeys(for mode: KeyboardMode) {
+        PriskLogger.keyboard.debug("KeyboardViewController: buildKeys mode=\(String(describing: mode), privacy: .public)")
+        cursorTracker.removeFromSuperview()
         // Remove existing
         keyStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         keyButtons.removeAll()
@@ -282,6 +285,7 @@ final class KeyboardViewController: UIInputViewController {
     // MARK: — Voice Input
 
     private func startVoiceInput() {
+        PriskLogger.keyboard.info("KeyboardViewController: startVoiceInput triggered")
         voiceButton.setState(.recording)
         suggestionBar.showPartial("Listening…")
         RecordingState.recording.save()
@@ -293,6 +297,7 @@ final class KeyboardViewController: UIInputViewController {
     }
 
     private func openURL(_ url: URL) {
+        PriskLogger.keyboard.info("KeyboardViewController: openURL \(url.absoluteString, privacy: .public)")
         // Use extensionContext to ask the host app to open the URL
         extensionContext?.open(url, completionHandler: nil)
     }

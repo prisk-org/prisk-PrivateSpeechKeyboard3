@@ -25,6 +25,7 @@ public final class STTEngineManager {
     // MARK: — Activation
 
     public func activate(_ type: STTEngineType, delegate: any STTEngineDelegate) throws {
+        PriskLogger.stt.info("STTEngineManager: activating engine \(type.rawValue, privacy: .public)")
         guard let engine = engines[type] else {
             throw STTManagerError.engineNotRegistered(type)
         }
@@ -39,6 +40,7 @@ public final class STTEngineManager {
     // MARK: — Recording Control
 
     public func startRecording() async throws {
+        PriskLogger.stt.info("STTEngineManager: startRecording")
         guard let engine = activeEngine else {
             throw STTManagerError.noActiveEngine
         }
@@ -65,6 +67,7 @@ public final class STTEngineManager {
 
     /// Write the final result to App Group and notify keyboard
     public func publishResult(_ result: TranscriptionResult) {
+        PriskLogger.stt.info("STTEngineManager: publishResult text='\(result.text.prefix(50), privacy: .private)'")
         result.save()
         RecordingState.done.save()
         // Clear partial

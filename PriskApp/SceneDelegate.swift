@@ -11,15 +11,18 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
+        PriskLogger.app.info("SceneDelegate: scene will connect, checking onboarding")
         guard let windowScene = scene as? UIWindowScene else { return }
         window = UIWindow(windowScene: windowScene)
 
+        let onboardingCompleted = AppGroup.defaults.bool(forKey: AppGroupKey.onboardingCompleted)
         let rootVC: UIViewController
-        if AppGroup.defaults.bool(forKey: AppGroupKey.onboardingCompleted) {
+        if onboardingCompleted {
             rootVC = RecordingViewController()
         } else {
             rootVC = OnboardingViewController()
         }
+        PriskLogger.app.info("SceneDelegate: rootVC = \(onboardingCompleted ? "RecordingVC" : "OnboardingVC", privacy: .public)")
 
         window?.rootViewController = UINavigationController(rootViewController: rootVC)
         window?.makeKeyAndVisible()
@@ -38,6 +41,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // MARK: — URL Scheme Handling
 
     private func handleURL(_ url: URL) {
+        PriskLogger.app.info("SceneDelegate: handleURL called: \(url.absoluteString, privacy: .public)")
         guard url.scheme == "prisk",
               url.host == "start-recording" else { return }
 

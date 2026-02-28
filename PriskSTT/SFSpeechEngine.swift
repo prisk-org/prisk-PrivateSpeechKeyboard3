@@ -23,6 +23,7 @@ public final class SFSpeechEngine: NSObject, STTEngine {
 
     public func prepare() async throws {
         let status = await SFSpeechRecognizer.requestAuthorization()
+        PriskLogger.stt.info("SFSpeechEngine: requestAuthorization status=\(status.rawValue)")
         guard status == .authorized else {
             throw SFSpeechError.notAuthorized(status)
         }
@@ -33,6 +34,8 @@ public final class SFSpeechEngine: NSObject, STTEngine {
         setState(.preparing)
 
         let locale = Locale(identifier: preferredLanguage ?? "en-US")
+        let _lang = preferredLanguage ?? "nil"
+        PriskLogger.stt.info("SFSpeechEngine: startRecording locale=\(_lang, privacy: .public)")
         recognizer = SFSpeechRecognizer(locale: locale)
         recognizer?.defaultTaskHint = .dictation
 
@@ -41,7 +44,11 @@ public final class SFSpeechEngine: NSObject, STTEngine {
         }
 
         let request = SFSpeechAudioBufferRecognitionRequest()
+        #if targetEnvironment(simulator)
+        request.requiresOnDeviceRecognition = false
+        #else
         request.requiresOnDeviceRecognition = true  // 100% on-device
+        #endif
         request.shouldReportPartialResults = true
         recognitionRequest = request
 
@@ -64,6 +71,7 @@ public final class SFSpeechEngine: NSObject, STTEngine {
             guard let self else { return }
             if let result {
                 let text = result.bestTranscription.formattedString
+                PriskLogger.stt.info("SFSpeechEngine: result isFinal=\(result.isFinal)")
                 if result.isFinal {
                     let duration = Date().timeIntervalSince(self.recordingStartTime ?? Date())
                     let finalResult = TranscriptionResult(

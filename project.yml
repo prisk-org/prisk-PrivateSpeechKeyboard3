@@ -55,6 +55,9 @@ targets:
                 UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
     entitlements:
       path: PriskApp/PriskApp.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.io.prisk.keyboard
     sources:
       - path: PriskApp
         excludes:
@@ -95,6 +98,9 @@ targets:
           NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).KeyboardViewController
     entitlements:
       path: PriskKeyboard/PriskKeyboard.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.io.prisk.keyboard
     sources:
       - path: PriskKeyboard
         excludes:

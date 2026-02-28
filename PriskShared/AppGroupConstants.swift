@@ -7,7 +7,11 @@ public enum AppGroup {
     public static let id = "group.io.prisk.keyboard"
 
     public static var defaults: UserDefaults {
-        UserDefaults(suiteName: id)!
+        if let ud = UserDefaults(suiteName: id) {
+            return ud
+        }
+        PriskLogger.appGroup.error("⚠️ AppGroup '\(id)' not available — falling back to UserDefaults.standard. Check entitlements!")
+        return .standard
     }
 }
 

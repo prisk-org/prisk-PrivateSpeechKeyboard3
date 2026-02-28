@@ -72,6 +72,8 @@ final class RecordingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let _et = engineType.rawValue
+        PriskLogger.app.info("RecordingVC: viewDidLoad engineType=\(_et, privacy: .public)")
         title = "Prisk"
         view.backgroundColor = .systemBackground
         navigationItem.rightBarButtonItem = settingsButton
@@ -124,6 +126,8 @@ final class RecordingViewController: UIViewController {
     // MARK: — Actions
 
     @objc private func micTapped() {
+        let _rec = isRecording
+        PriskLogger.app.info("RecordingVC: micTapped isRecording=\(_rec)")
         if isRecording {
             STTEngineManager.shared.stopRecording()
         } else {
@@ -158,6 +162,7 @@ final class RecordingViewController: UIViewController {
     // MARK: — UI Updates
 
     private func updateUI(for state: STTEngineState) {
+        PriskLogger.app.info("RecordingVC: state changed to \(String(describing: state), privacy: .public)")
         switch state {
         case .idle, .finished:
             micButton.configuration?.baseBackgroundColor = .systemBlue
@@ -165,7 +170,7 @@ final class RecordingViewController: UIViewController {
             isRecording = false
             autoStartLanguage = nil
         case .preparing:
-            statusLabel.text = "Preparing…"
+            statusLabel.text = "Preparing… (first run: downloading model ~75MB)"
         case .listening:
             micButton.configuration?.baseBackgroundColor = .systemRed
             statusLabel.text = "Listening… (tap to stop)"
@@ -185,6 +190,7 @@ final class RecordingViewController: UIViewController {
     }
 
     private func showError(_ error: Error) {
+        PriskLogger.app.error("RecordingVC: error=\(error.localizedDescription, privacy: .public)")
         statusLabel.text = "Error: \(error.localizedDescription)"
         isRecording = false
         updateUI(for: .idle)

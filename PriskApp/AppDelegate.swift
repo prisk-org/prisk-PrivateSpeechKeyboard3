@@ -10,6 +10,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        PriskLogger.app.info("AppDelegate: didFinishLaunching")
         setupSTTEngines()
         return true
     }
@@ -29,13 +30,19 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupSTTEngines() {
         Task { @MainActor in
             let manager = STTEngineManager.shared
-            manager.register(WhisperKitEngine())
-            manager.register(SFSpeechEngine())
-            manager.register(SpeechAnalyzerEngine())
-            manager.register(MoonshineEngine())
-            manager.register(ReazonSpeechEngine())
-            manager.register(VoskEngine())
-            manager.register(KotobaWhisperEngine())
+            let engines: [any STTEngine] = [
+                WhisperKitEngine(),
+                SFSpeechEngine(),
+                SpeechAnalyzerEngine(),
+                MoonshineEngine(),
+                ReazonSpeechEngine(),
+                VoskEngine(),
+                KotobaWhisperEngine(),
+            ]
+            for engine in engines {
+                manager.register(engine)
+                PriskLogger.app.info("AppDelegate: registered engine \(engine.engineType.rawValue, privacy: .public)")
+            }
 
             // Activate the user's preferred engine
             let engineType = STTEngineType.load()
