@@ -43,13 +43,13 @@ final class ModelManagerViewController: UITableViewController {
     // MARK: — Persistence
 
     private func loadCurrentSelection() {
-        let saved = AppGroupConstants.sharedDefaults?.string(forKey: "selectedModelName")
+        let saved = AppGroup.defaults.string(forKey: "selectedModelName")
             ?? "openai_whisper-tiny"
         selectedIndex = models.firstIndex { $0.name == saved } ?? 0
     }
 
     private func saveSelection(_ name: String) {
-        AppGroupConstants.sharedDefaults?.set(name, forKey: "selectedModelName")
+        AppGroup.defaults.set(name, forKey: "selectedModelName")
     }
 
     // MARK: — UITableViewDataSource

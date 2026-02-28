@@ -293,15 +293,8 @@ final class KeyboardViewController: UIInputViewController {
     }
 
     private func openURL(_ url: URL) {
-        // Keyboard extensions must use the responder chain to open URLs
-        var responder: UIResponder? = self
-        while let r = responder {
-            if let app = r as? UIApplication {
-                app.open(url, options: [:], completionHandler: nil)
-                return
-            }
-            responder = r.next
-        }
+        // Use extensionContext to ask the host app to open the URL
+        extensionContext?.open(url, completionHandler: nil)
     }
 
     private func insertTranscription(_ result: TranscriptionResult) {
@@ -318,7 +311,6 @@ final class KeyboardViewController: UIInputViewController {
     // MARK: — Cursor Movement
 
     private func moveCursor(by offset: Int) {
-        let direction: UITextLayoutDirection = offset < 0 ? .left : .right
         for _ in 0..<abs(offset) {
             textDocumentProxy.adjustTextPosition(byCharacterOffset: offset < 0 ? -1 : 1)
         }

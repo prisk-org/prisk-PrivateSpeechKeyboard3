@@ -510,7 +510,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.PriskApp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.keyboard;
 				PRODUCT_NAME = Prisk;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,7 +537,7 @@
 		453F7922123723F418CA831C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PriskKeyboard/PriskKeyboard.entitlements;
 				INFOPLIST_FILE = PriskKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -546,7 +546,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.PriskKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.keyboard.extension;
 				PRODUCT_NAME = PriskKeyboard;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -556,7 +556,7 @@
 		4F8587FB3C1EDDE6538BE8B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PriskKeyboard/PriskKeyboard.entitlements;
 				INFOPLIST_FILE = PriskKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -565,7 +565,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.PriskKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.keyboard.extension;
 				PRODUCT_NAME = PriskKeyboard;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -695,7 +695,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.PriskApp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.prisk.keyboard;
 				PRODUCT_NAME = Prisk;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

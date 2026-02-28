@@ -104,13 +104,13 @@ public final class WhisperKitEngine: NSObject, STTEngine {
         let snapshot = audioBuffer
         do {
             let options = DecodingOptions(
-                language: preferredLanguage,
                 task: .transcribe,
+                language: preferredLanguage,
                 usePrefillPrompt: true
             )
             let results = try await whisperKit.transcribe(audioArray: snapshot, decodeOptions: options)
             let partial = results.first?.text ?? ""
-            if !partial.trimmingCharacters(in: .whitespaces).isEmpty {
+            if !partial.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty {
                 delegate?.engine(self, didProducePartialText: partial)
             }
         } catch {
@@ -126,12 +126,12 @@ public final class WhisperKitEngine: NSObject, STTEngine {
         let duration = Date().timeIntervalSince(recordingStartTime ?? Date())
         do {
             let options = DecodingOptions(
-                language: preferredLanguage,
                 task: .transcribe,
+                language: preferredLanguage,
                 usePrefillPrompt: true
             )
             let results = try await whisperKit.transcribe(audioArray: audioBuffer, decodeOptions: options)
-            let text = results.map(\.text).joined(separator: " ").trimmingCharacters(in: .whitespaces)
+            let text = results.map { $0.text }.joined(separator: " ").trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             let detectedLang = results.first?.language
 
             let result = TranscriptionResult(
